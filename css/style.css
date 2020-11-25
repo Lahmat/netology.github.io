@@ -673,3 +673,150 @@ h3 {
     color: #999999;
     text-decoration: none;
 }
+
+.popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999999;
+    display: flex;
+    visibility: hidden;
+}
+
+.popup_body {
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    margin: auto auto;
+    width: 320px;
+}
+
+.popup_content {
+    width: 100%;
+}
+
+.form-row:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.form-hint {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #0f0d0e;
+    margin-bottom: 5px;
+}
+
+.textarea {
+    margin-bottom: 20px;
+    color: #999999;
+}
+
+.textarea_input {
+    width: 100%;
+    background-color: #f4f7f6;
+    padding: 17px;
+    border: none;
+    height: 100px;
+    resize: none;
+}
+
+.select {
+    position: relative;
+    width: 100%;
+    background-color: #f4f7f6;
+    border: none;
+    padding: 17px;
+    color: #999999;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select_wrapper {
+    position: relative;
+}
+
+.select_wrapper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../icons/form-arrows.svg) center right/ 10px no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.select:focus, .textarea_input:focus {
+    outline: 2px solid #b59f5b;
+}
+
+.radio {
+    display: flex;
+}
+
+.radio_label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #0f0d0e;
+    font-style: inherit;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.radio_item:nth-child(n+2) {
+    margin-left: 30px;
+}
+
+.radio_label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff url(../icons/form-empty-circle.svg) center center/ cover no-repeat;
+    top: 0;
+    left: 0;
+}
+
+.radio_label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff url(../icons/form-circle.svg) center center/ cover no-repeat;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.radio_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    margin: 0;
+}
+
+.radio_input:checked+.radio_label:after {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.popup_close {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: -30px;
+    right: 0;
+}
